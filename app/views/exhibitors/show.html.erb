@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @exhibitor.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @exhibitor.description %>
+</p>
+
+<p>
+  <b>Sponsor:</b>
+  <%= @exhibitor.sponsor_id %>
+</p>
+
+<p>
+  <b>Exhibitor category:</b>
+  <%= @exhibitor.exhibitor_category_id %>
+</p>
+
+<div id="cutty">
+	<b>Meetings sponsored:</b><br>
+	<p><%= @meetings %></p>
+</div>
+
+
+<%= link_to 'Edit', edit_exhibitor_path(@exhibitor) %> |
+<%= link_to 'Back', exhibitors_path %>

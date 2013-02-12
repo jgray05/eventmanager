@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @exhibitor_category.name %>
+</p>
+
+<div id="cutty">
+	<b>Exhibitors:</b>
+	<% @cat_exhibitors.each do |e| %>
+		<p><%= e.name %></p>
+	<% end %>
+</div>
+
+
+<%= link_to 'Edit', edit_exhibitor_category_path(@exhibitor_category) %> |
+<%= link_to 'Back', exhibitor_categories_path %>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventmanager</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- Begin Wrapper -->
+<div id="wrapper">
+
+<!-- Begin Header -->
+<div id="header">
+
+	<%= image_tag("header.jpg", :alt => "Header") %>		 
+
+<!-- End Header -->
+</div>
+
+<!-- Begin Naviagtion -->
+<div id="navigation">
+
+	<%= link_to 'Home', :controller => "home" %>
+	<%= link_to 'Exhibitors', exhibitors_path %>
+	<%= link_to 'Meetings', meetings_path %>
+	<%= link_to 'Venues', venues_path %>
+	<%= link_to 'Exhibitor Categories', exhibitor_categories_path %>
+
+<!-- End Naviagtion -->
+</div>
+
+<!-- Begin Content -->
+<div id="content">
+
+<%= yield %>
+
+<!-- End Content -->
+</div>
+
+<!-- Begin Footer -->
+<div id="footer">
+
+	Copyright 2013 Cutty Strengh, Inc.		
+
+<!-- End Footer -->
+</div>
+
+<!-- End Wrapper -->
+</div>
+</body>
+</html>
