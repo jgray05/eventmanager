@@ -44,6 +44,7 @@ class MeetingsController < ApplicationController
   # POST /meetings.json
   def create
     @meeting = Meeting.new(params[:meeting])
+    params[:meeting][:sponsor_id]||=[]
 
     respond_to do |format|
       if @meeting.save
@@ -60,6 +61,7 @@ class MeetingsController < ApplicationController
   # PUT /meetings/1.json
   def update
     @meeting = Meeting.find(params[:id])
+    params[:meeting][:sponsor_id]||=[]
 
     respond_to do |format|
       if @meeting.update_attributes(params[:meeting])
